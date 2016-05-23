@@ -5,7 +5,7 @@ var {Component} = React
 var Header = require('./components/Header')
 var Swapi = require('./api/Swapi')
 
-var { GetPlanet } from './actions/AppActions'
+// var { GetPlanet } from './actions/AppActions'
 // var store = require('./store/AppStore')
 
 class App extends Component {
