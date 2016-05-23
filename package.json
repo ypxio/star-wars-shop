@@ -4,7 +4,8 @@
   "description": "StarShopWars is a platform to buy planets, starships, and vehicles form Star Wars Movies. This project's purpose is for Salestock Assessment.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "postinstall": "gulp"
   },
   "keywords": [
     "starwars"
