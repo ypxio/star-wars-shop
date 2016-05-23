@@ -32,7 +32,7 @@ gulp.task('browserify', function(){
             console.log("compiled")
     }).bundle()
         .pipe(source('script.js'))
-        .pipe(gulp.dest('src'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Livereload
@@ -59,7 +59,7 @@ gulp.task('lessCompile', function(){
 // Build
 gulp.task('build', function(){
     browserify({
-        entries: ['./src/Main.jsx'],
+        entries: ['./src/Index.jsx'],
         transform: [reactify, babelify],
         debug: false,
         extensions: ['.jsx'],
@@ -70,7 +70,7 @@ gulp.task('build', function(){
     .bundle()
         .pipe(source('build.min.js'))
         .pipe(streamify(uglify()))
-        .pipe(gulp.dest('src'))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('default', ['browserify', 'watchLess', 'connect']);
